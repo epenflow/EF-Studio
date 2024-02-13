@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { terminalContent } from './classTypes';
+import { terminalContent } from './libs/classTypes';
 type TerminalContentType = React.HTMLAttributes<HTMLDivElement>;
 interface Props extends TerminalContentType {}
 const TerminalContent: React.FC<Props> = ({ children, className, title }) => {

@@ -24,7 +24,6 @@ const FooterTimes = () => {
 		}).format(date);
 		return dateFormat;
 	}
-	console.info('ss');
 	return <h1>{formatDate(dates)}</h1>;
 };
 

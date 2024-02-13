@@ -1,4 +1,5 @@
 'use client';
+
 import { useTerminalProvider } from '@/app/utils/context/TerminalContext';
 export function Button() {
 	const { setMaximize, setMinimize, setOpen, open, maximize, minimize } =
