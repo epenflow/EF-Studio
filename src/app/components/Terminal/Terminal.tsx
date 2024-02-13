@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import { useTerminalProvider } from '@/app/utils/context/TerminalContext';
 import Condition from '@/app/utils/Condition';
 import { createPortal } from 'react-dom';
+import dynamic from 'next/dynamic';
 interface Props {
 	children: React.ReactNode;
 	contentClassNames?: string;
@@ -66,4 +67,6 @@ const Terminal: React.FC<Props> = ({
 	);
 };
 
-export default Terminal;
+export default dynamic(() => Promise.resolve(Terminal), {
+	ssr: false,
+});
