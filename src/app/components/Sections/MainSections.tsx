@@ -18,7 +18,7 @@ const Cards = () => {
 	return (
 		<div className='h-screen w-screen flex items-center justify-center'>
 			<h1 className='absolute top-5 text-justify p-4 text-7xl lg:text-8xl font-bold text-default-200 mix-blend-difference'>
-				[S—P] 2024—13
+				[SS] 2024—Winter/23
 			</h1>
 			<div
 				className='cursor-pointer'
