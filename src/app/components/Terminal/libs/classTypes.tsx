@@ -11,7 +11,7 @@ export const terminalClass = {
 export const terminalHeaderClass = {
 	styles: 'bg-default-300 border-solid border-default-400 shadow-default-100',
 	spaces: 'p-2',
-	displays: 'flex flex-row items-center relative',
+	displays: 'flex flex-row items-center relative gap-2',
 	headings: 'w-full text-center text-xs font-semibold',
 	variants: {
 		minimize: 'border-[1px] rounded-md',

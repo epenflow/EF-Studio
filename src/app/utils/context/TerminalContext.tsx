@@ -10,7 +10,7 @@ type contexts = {
 	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 const TerminalContext = React.createContext<contexts>({
-	minimize: false,
+	minimize: true,
 	maximize: false,
 	open: false,
 	setMinimize: () => {},
@@ -21,7 +21,7 @@ interface Props {
 	children: React.ReactNode;
 }
 export const TerminalProvider = ({ children }: Props) => {
-	const [minimize, setMinimize] = React.useState<boolean>(false);
+	const [minimize, setMinimize] = React.useState<boolean>(true);
 	const [maximize, setMaximize] = React.useState<boolean>(false);
 	const [open, setOpen] = React.useState<boolean>(false);
 	const values = {

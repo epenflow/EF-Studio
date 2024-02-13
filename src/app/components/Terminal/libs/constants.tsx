@@ -15,7 +15,7 @@ export const buttons: buttons[] = [
 		key: 1,
 		title: title.open,
 		classNames: terminalHeaderButtonClass.red,
-		actions: 'open',
+		actions: 'minimize',
 	},
 	{
 		key: 2,

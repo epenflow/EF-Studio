@@ -10,7 +10,7 @@ const TerminalTitle: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
 		<h1
 			id='terminal__title'
 			title={title}
-			className={clsx(terminalHeaderClass.headings)}>
+			className={clsx(terminalHeaderClass.headings, 'overflow-hidden')}>
 			{children}
 		</h1>
 	);
