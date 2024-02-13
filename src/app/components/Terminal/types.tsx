@@ -1,4 +1,0 @@
-const terminalClass = {
-	terminal: {},
-	terminalHeader: {},
-};

@@ -1,37 +1,28 @@
 'use client';
 import React from 'react';
 import TerminalHeader from './TerminalHeader';
-import TerminalContent from './TerminalContent';
 import clsx from 'clsx';
 import { useTerminalProvider } from '@/app/utils/context/TerminalContext';
 import Condition from '@/app/utils/Condition';
 import { createPortal } from 'react-dom';
 import dynamic from 'next/dynamic';
-interface Props {
-	children: React.ReactNode;
-	contentClassNames?: string;
-	title: string;
+import { terminalClass } from './classTypes';
+import cn from '@/app/utils/cn';
+interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
+	heading: string;
+	fitContent?: boolean;
 }
 const Terminal: React.FC<Props> = ({
 	children,
-	contentClassNames,
-	title,
-}: Props) => {
-	const { open, maximize, minimize } = useTerminalProvider();
+	heading,
+	fitContent = false,
+}) => {
+	const { maximize, minimize } = useTerminalProvider();
 	const [isDom, setDom] = React.useState(false);
 	const programWindow = document.querySelector(
 		'#program__window'
 	) as HTMLElement;
-	const classNames = {
-		positions:
-			'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50',
-		styles: 'bg-default-200 border-default rounded-md flex flex-col shadow-default-200',
-		sizes: {
-			lg: 'h-4/5 w-4/5',
-			md: 'h-[50vh] lg:h-4/5 w-4/5 lg:w-1/2',
-		},
-		modal: 'bg-[#00ff00] w-screen h-screen flex items-center justify-center',
-	};
+
 	React.useEffect(() => {
 		setDom((isDom) => (isDom = true));
 		if (maximize) document.body.style.overflow = 'hidden';
@@ -39,29 +30,33 @@ const Terminal: React.FC<Props> = ({
 			document.body.style.overflow = 'unset';
 		};
 	}, [maximize]);
-	console.info('terminal');
 	return (
 		<Condition
 			state={minimize}
 			secondChildren={
 				isDom &&
-				createPortal(<TerminalHeader title={title} />, programWindow)
+				createPortal(<TerminalHeader title={heading} />, programWindow)
 			}>
 			<div
+				id='terminal__programs'
+				title='terminal__programs_modal'
 				className={clsx(
-					maximize && [classNames.positions, classNames.modal]
+					maximize && [terminalClass.positions, terminalClass.modal]
 				)}>
 				<div
-					className={clsx(
-						classNames.styles,
+					id='terminal'
+					title='terminal__content_wrapper'
+					className={cn(
+						terminalClass.styles,
 						maximize === true
-							? classNames.sizes.lg
-							: [classNames.sizes.md, classNames.positions]
+							? terminalClass.sizes.lg
+							: [
+									!fitContent && terminalClass.sizes.md,
+									terminalClass.positions,
+							  ]
 					)}>
-					<TerminalHeader title={title} />
-					<TerminalContent contentClassName={contentClassNames}>
-						{children}
-					</TerminalContent>
+					<TerminalHeader title={heading} />
+					{children}
 				</div>
 			</div>
 		</Condition>

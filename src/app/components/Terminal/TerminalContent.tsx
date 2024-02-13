@@ -1,16 +1,14 @@
-import clsx, { ClassValue } from 'clsx';
+import clsx from 'clsx';
 import React from 'react';
-interface Props {
-	contentClassName?: string;
-	children: React.ReactNode;
-}
-const TerminalContent: React.FC<Props> = ({ contentClassName, children }) => {
-	const classNames = {
-		default:
-			'h-full rounded-b-md overflow-hidden overflow-y-scroll no-scrollbar',
-	};
+import { terminalContent } from './classTypes';
+type TerminalContentType = React.HTMLAttributes<HTMLDivElement>;
+interface Props extends TerminalContentType {}
+const TerminalContent: React.FC<Props> = ({ children, className, title }) => {
 	return (
-		<div className={clsx(classNames.default, contentClassName)}>
+		<div
+			id='terminal__content'
+			title={title}
+			className={clsx(terminalContent.default, className)}>
 			{children}
 		</div>
 	);
