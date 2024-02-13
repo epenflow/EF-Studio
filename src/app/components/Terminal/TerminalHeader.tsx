@@ -25,7 +25,7 @@ const TerminalHeader: React.FC<Props> = ({ title }) => {
 				classNames.styles,
 				classNames.spaces,
 				classNames.displays,
-				minimize === true
+				!minimize === true
 					? classNames.variants.minimize
 					: classNames.variants.maximize
 			)}>

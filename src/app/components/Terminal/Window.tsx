@@ -4,15 +4,12 @@ import React from 'react';
 const Window = () => {
 	const classNames = {
 		displays: 'flex flex-col gap-1 w-52',
-		positions: 'fixed bottom-5 right-5',
+		positions: 'fixed lg:bottom-10 bottom-8 lg:right-5 right-2',
 	};
 	return (
-		<article
+		<aside
 			id='program__window'
-			className={clsx(
-				classNames.displays,
-				classNames.positions
-			)}></article>
+			className={clsx(classNames.displays, classNames.positions)}></aside>
 	);
 };
 

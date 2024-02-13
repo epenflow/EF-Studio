@@ -11,3 +11,8 @@
 		scrollbar-width: none;
 	}
 }
+@layer base {
+	body {
+		background-color: #f2f2f2;
+	}
+}
