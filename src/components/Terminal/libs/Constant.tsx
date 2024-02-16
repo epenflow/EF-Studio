@@ -1,4 +1,4 @@
-import { terminalHeaderButtonClass } from './classTypes';
+import { terminalHeaderButtonClass } from './ClassName';
 const title = {
 	open: 'red__open',
 	minimize: 'yellow__minimize',

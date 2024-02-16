@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { terminalClass } from './libs/classTypes';
-import { useTerminalProvider } from '@/app/utils/context/TerminalContext';
+import { terminalClass } from './libs/ClassName';
 import TerminalHeader from './TerminalHeader';
-import cn from '@/app/utils/cn';
+import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import cn from '@/utils/cn';
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;

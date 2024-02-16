@@ -16,15 +16,16 @@ const FooterTimes = () => {
 			clearInterval(intervalId);
 		};
 	}, []);
-	function formatDate(date: Date) {
+	function formatDate(date: Date | number) {
 		const dateFormat = new Intl.DateTimeFormat('id-ID', {
 			minute: '2-digit',
 			hour: '2-digit',
 			second: '2-digit',
+			hour12: true,
 		}).format(date);
 		return dateFormat;
 	}
-	return <h1>{formatDate(dates)}</h1>;
+	return <h1>{formatDate(dates).replaceAll('.', ' : ')}</h1>;
 };
 
 export default dynamic(() => Promise.resolve(FooterTimes), {

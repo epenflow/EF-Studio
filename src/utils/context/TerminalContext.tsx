@@ -21,7 +21,7 @@ interface Props {
 	children: React.ReactNode;
 }
 export const TerminalProvider = ({ children }: Props) => {
-	const [minimize, setMinimize] = React.useState<boolean>(true);
+	const [minimize, setMinimize] = React.useState<boolean>(false);
 	const [maximize, setMaximize] = React.useState<boolean>(false);
 	const [open, setOpen] = React.useState<boolean>(false);
 	const values = {
@@ -41,7 +41,9 @@ export const TerminalProvider = ({ children }: Props) => {
 export const useTerminalProvider = () => {
 	const context = React.useContext<contexts>(TerminalContext);
 	if (context === undefined) {
-		throw new Error('use context must use within ContextProvider');
+		throw new Error(
+			'use terminal Provider must use within TerminalProvider'
+		);
 	}
 	return context;
 };

@@ -2,9 +2,9 @@
 import clsx from 'clsx';
 import React from 'react';
 import TerminalHeaderButton from './TerminalHeaderButton';
-import { useTerminalProvider } from '@/app/utils/context/TerminalContext';
-import { terminalHeaderClass } from './libs/classTypes';
+import { terminalHeaderClass } from './libs/ClassName';
 import TerminalTitle from './TerminalTitle';
+import { useTerminalProvider } from '@/utils/context/TerminalContext';
 interface Props {
 	title: string;
 }

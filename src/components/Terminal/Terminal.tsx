@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
 import TerminalHeader from './TerminalHeader';
-import { useTerminalProvider } from '@/app/utils/context/TerminalContext';
-import Condition from '@/app/utils/Condition';
 import { createPortal } from 'react-dom';
 import dynamic from 'next/dynamic';
-import { domReady } from '@/app/utils/hooks/domReady';
 import TerminalModal from './TerminalModal';
+import { domReady } from '@/utils/hooks/domReady';
+import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import Condition from '@/utils/Condition';
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;

@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import { Button } from './libs';
-import { terminalHeaderButtonClass } from './libs/classTypes';
-import Mapping from '@/app/utils/Mapping';
-import cn from '@/app/utils/cn';
-import { buttons } from './libs/constants';
-import { useTerminalProvider } from '@/app/utils/context/TerminalContext';
+import { Button } from './libs/Button';
+import { terminalHeaderButtonClass } from './libs/ClassName';
+import { buttons } from './libs/Constant';
+import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import Mapping from '@/utils/Mapping';
+import cn from '@/utils/cn';
 const TerminalHeaderButton = () => {
 	const handleClick = Button();
 	const { minimize } = useTerminalProvider();

@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { terminalHeaderClass } from './libs/classTypes';
+import { terminalHeaderClass } from './libs/ClassName';
 
 const TerminalTitle: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
 	children,

@@ -9,7 +9,7 @@ const Footer = () => {
 			<div className='w-screen flex flex-row justify-between items-center lg:px-10 px-2 py-2  font-bold lg:font-medium lg:text-lg capitalize text-xs'>
 				<div className='flex flex-row items-center'>
 					<h1>instagram,</h1>
-					<h1>threads</h1>
+					<h1>&nbsp;threads</h1>
 				</div>
 				<FooterTimes />
 				<h1>send an email</h1>
