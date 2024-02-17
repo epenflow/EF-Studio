@@ -1,14 +1,13 @@
-import Navbar from '@/components/Navbar/Navbar';
 import MainSections from '@/components/Main/MainSections';
-import Footer from '@/components/Footer/Footer';
+import Navigation from '@/components/Navigation';
 export default function Home() {
 	return (
 		<>
-			<Navbar />
-			<main className='overflow-x-hidden'>
-				<MainSections />
-			</main>
-			<Footer />
+			<Navigation>
+				<main className='overflow-x-hidden'>
+					<MainSections />
+				</main>
+			</Navigation>
 		</>
 	);
 }

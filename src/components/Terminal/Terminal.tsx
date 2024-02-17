@@ -7,6 +7,7 @@ import TerminalModal from './TerminalModal';
 import { domReady } from '@/utils/hooks/domReady';
 import { useTerminalProvider } from '@/utils/context/TerminalContext';
 import Condition from '@/utils/Condition';
+import Comments from '@/utils/Comments';
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;
@@ -29,14 +30,23 @@ const Terminal: React.FC<Props> = ({
 			state={minimize}
 			secondChildren={
 				isDom &&
-				createPortal(<TerminalHeader title={heading} />, programWindow)
+				createPortal(
+					<>
+						<Comments comment='terminal header' />
+						<TerminalHeader title={heading} />
+					</>,
+					programWindow
+				)
 			}>
-			<TerminalModal
-				heading={heading}
-				fitContent={fitContent}
-				className={className}>
-				{children}
-			</TerminalModal>
+			<>
+				<Comments comment='terminal modal' />
+				<TerminalModal
+					heading={heading}
+					fitContent={fitContent}
+					className={className}>
+					{children}
+				</TerminalModal>
+			</>
 		</Condition>
 	);
 };

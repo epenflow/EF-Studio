@@ -2,6 +2,7 @@ import React from 'react';
 import { TerminalProvider } from '@/utils/context/TerminalContext';
 import Terminal from '../Terminal/Terminal';
 import TerminalContent from '../Terminal/TerminalContent';
+import Comments from '@/utils/Comments';
 export const TerminalCards = () => {
 	return (
 		<TerminalProvider>
