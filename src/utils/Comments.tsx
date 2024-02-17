@@ -4,9 +4,11 @@ import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
 const Comments = ({ comment }: { comment: string }) => {
 	const ref = React.useRef<HTMLSpanElement>(null);
 	useIsomorphicLayoutEffect(() => {
-		let comments = null;
-		let el = null;
-		let parent = null;
+		let comments: Comment = (window || global).document.createComment(
+			` ${comment.trim()} `
+		);
+		let el: HTMLSpanElement = ref?.current as HTMLSpanElement;
+		let parent: any = null;
 
 		if (ref.current) {
 			el = ref.current;

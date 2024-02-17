@@ -24,7 +24,7 @@ const DragCards = () => {
 			<div className='cursor-move flex justify-end'>
 				<Cards className='w-full lg:w-1/2 h-auto overflow-y-scroll p-2 relative no-scrollbar'>
 					<Heading>information</Heading>
-					<p className='text-xs text-justify'>
+					<p className='text-xs text-justify cursor-text'>
 						{CONTENT.description}
 					</p>
 					<div className='flex lg:flex-col flex-row justify-between  gap-2 mb-1 mt-3'>
