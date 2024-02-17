@@ -8,6 +8,7 @@ import { domReady } from '@/utils/hooks/domReady';
 import { useTerminalProvider } from '@/utils/context/TerminalContext';
 import Condition from '@/utils/Condition';
 import Comments from '@/utils/Comments';
+import Draggable from 'react-draggable';
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;

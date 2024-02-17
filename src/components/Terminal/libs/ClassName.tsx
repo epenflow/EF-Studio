@@ -14,7 +14,7 @@ export const terminalHeaderClass = {
 	displays: 'flex flex-row items-center relative gap-2',
 	headings: 'w-full text-center text-xs font-semibold',
 	variants: {
-		minimize: 'border-[1px] rounded-md',
+		minimize: 'border-[1px] rounded-md w-52',
 		maximize: 'border-b-[1px] rounded-t-md',
 	},
 };

@@ -1,10 +1,10 @@
 'use client';
-import clsx from 'clsx';
 import React from 'react';
 import TerminalHeaderButton from './TerminalHeaderButton';
 import { terminalHeaderClass } from './libs/ClassName';
 import TerminalTitle from './TerminalTitle';
 import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import cn from '@/utils/cn';
 interface Props {
 	title: string;
 }
@@ -14,7 +14,7 @@ const TerminalHeader: React.FC<Props> = ({ title }) => {
 		<div
 			id='terminal__header'
 			title={`terminal__header_${title.replace(' ', '-')}`}
-			className={clsx(
+			className={cn(
 				terminalHeaderClass.styles,
 				terminalHeaderClass.spaces,
 				terminalHeaderClass.displays,
