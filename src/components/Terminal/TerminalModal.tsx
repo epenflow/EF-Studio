@@ -38,7 +38,8 @@ const TerminalModal: React.FC<Props> = ({
 				positionOffset={{
 					x: !maximize ? '-50%' : 0,
 					y: !maximize ? '-50%' : 0,
-				}}>
+				}}
+				handle='#terminal__title'>
 				<div
 					id='terminal'
 					title='terminal__content_wrapper'
@@ -49,8 +50,7 @@ const TerminalModal: React.FC<Props> = ({
 							: [
 									!fitContent && terminalClass.sizes.md,
 									terminalClass.positions,
-							  ],
-						'cursor-crosshair'
+							  ]
 					)}>
 					<TerminalHeader title={heading} />
 					{children}

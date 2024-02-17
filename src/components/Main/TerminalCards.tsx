@@ -9,7 +9,7 @@ export const TerminalCards = () => {
 			<Terminal
 				heading={`__note__from/epenflow`}
 				className='bg-black bg-opacity-50'>
-				<TerminalContent className='flex flex-col p-2 text-lg font-medium bg-white gap-1 lg:text-xl cursor-auto'>
+				<TerminalContent className='flex flex-col p-2 text-lg font-medium bg-white gap-1 lg:text-xl cursor-auto overflow-scroll'>
 					<h1 className='text-end'>Dear visitors,</h1>
 					<div className='text-justify'>
 						<p>

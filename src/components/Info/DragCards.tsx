@@ -6,8 +6,6 @@ import Education from './Education';
 import Link from 'next/link';
 import { CONTENT } from './libs/Constant';
 import { Contact } from './Contact';
-import Marquee from 'react-fast-marquee';
-import Mapping from '@/utils/Mapping';
 import Draggable from 'react-draggable';
 const text = [
 	'we are building our new website, stay tuned',
@@ -20,10 +18,16 @@ const text = [
 ];
 const DragCards = () => {
 	return (
-		<Draggable>
-			<div className='cursor-move flex justify-end'>
-				<Cards className='w-full lg:w-1/2 h-auto overflow-y-scroll p-2 relative no-scrollbar'>
-					<Heading>information</Heading>
+		<Draggable handle='#drag__handle_info'>
+			<div className='flex justify-end'>
+				<Cards className='w-full lg:w-1/2 h-auto p-2 relative no-scrollbar shadow-default-100'>
+					<div className='flex flex-row items-center gap-1 my-2'>
+						<span
+							id='drag__handle_info'
+							className='block cursor-move h-3 w-3 rounded-full border-[1px] border-solid border-black hover:bg-black'
+						/>
+						<Heading className='m-0'>information</Heading>
+					</div>
 					<p className='text-xs text-justify cursor-text'>
 						{CONTENT.description}
 					</p>
@@ -45,7 +49,6 @@ const DragCards = () => {
 							</Heading>
 						</div>
 					</div>
-
 					<Link
 						href={'#'}
 						className='border-default p-1 uppercase w-full flex items-center justify-center text-default-400 hover:bg-black hover:text-white text-sm'>
