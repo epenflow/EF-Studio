@@ -10,11 +10,14 @@ const Navbar = () => {
 	return (
 		<header className='fixed top-0 left-0 z-50'>
 			<div className='w-screen flex flex-row justify-between items-center lg:px-10 px-2 py-2  font-bold lg:font-medium lg:text-lg capitalize text-xs'>
-				<Link href={'/'}>
+				<Link
+					href={'/'}
+					scroll={false}>
 					<span>epen//flow©️</span>
 				</Link>
 				<div className='flex flex-row'>
 					<Link
+						scroll={false}
 						href={'/info'}
 						className='flex items-center justify-center gap-1 cursor-pointer capitalize'
 						onMouseEnter={hover}
