@@ -4,6 +4,7 @@ import { terminalClass } from './libs/ClassName';
 import TerminalHeader from './TerminalHeader';
 import { useTerminalProvider } from '@/utils/context/TerminalContext';
 import cn from '@/utils/cn';
+import Draggable from 'react-draggable';
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;
@@ -33,21 +34,28 @@ const TerminalModal: React.FC<Props> = ({
 					className,
 				]
 			)}>
-			<div
-				id='terminal'
-				title='terminal__content_wrapper'
-				className={cn(
-					terminalClass.styles,
-					maximize === true
-						? terminalClass.sizes.lg
-						: [
-								!fitContent && terminalClass.sizes.md,
-								terminalClass.positions,
-						  ]
-				)}>
-				<TerminalHeader title={heading} />
-				{children}
-			</div>
+			<Draggable
+				positionOffset={{
+					x: !maximize ? '-50%' : 0,
+					y: !maximize ? '-50%' : 0,
+				}}>
+				<div
+					id='terminal'
+					title='terminal__content_wrapper'
+					className={cn(
+						terminalClass.styles,
+						maximize === true
+							? terminalClass.sizes.lg
+							: [
+									!fitContent && terminalClass.sizes.md,
+									terminalClass.positions,
+							  ],
+						'cursor-crosshair'
+					)}>
+					<TerminalHeader title={heading} />
+					{children}
+				</div>
+			</Draggable>
 		</div>
 	);
 };

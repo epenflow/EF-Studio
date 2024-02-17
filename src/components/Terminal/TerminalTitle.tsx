@@ -1,6 +1,6 @@
 import React from 'react';
-import clsx from 'clsx';
 import { terminalHeaderClass } from './libs/ClassName';
+import cn from '@/utils/cn';
 
 const TerminalTitle: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
 	children,
@@ -10,7 +10,10 @@ const TerminalTitle: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
 		<h1
 			id='terminal__title'
 			title={title}
-			className={clsx(terminalHeaderClass.headings, 'overflow-hidden')}>
+			className={cn(
+				terminalHeaderClass.headings,
+				'overflow-hidden cursor-text'
+			)}>
 			{children}
 		</h1>
 	);
