@@ -19,7 +19,7 @@
 .square {
 	width: 55px;
 	height: 55px;
-	background-color: #f2f2f2;
+	background-color: orangered;
 }
 @media only screen and (max-width: 640px) {
 	.square {

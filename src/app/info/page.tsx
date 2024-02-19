@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import Navigation from '@/components/Navigation/Navigation';
 import InformationCard from '@/components/Info/InformationCard';
 
 export default function page() {

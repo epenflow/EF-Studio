@@ -12,7 +12,7 @@ const TerminalTitle: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
 			title={title}
 			className={cn(
 				terminalHeaderClass.headings,
-				'overflow-hidden cursor-move'
+				`overflow-hidden cursor-move hover:before:content-['::DRAG::'] hover:after:content-['::DRAG::']`
 			)}>
 			{children}
 		</h1>

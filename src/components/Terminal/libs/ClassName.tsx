@@ -17,13 +17,13 @@ export const terminalHeaderClass = {
 		minimize: 'border-[1px] rounded-md w-52',
 		maximize: 'border-b-[1px] rounded-t-md',
 	},
-};
+} as const;
 export const terminalHeaderButtonClass = {
-	red: 'bg-[#FD5754] border-[#DF494A]',
-	yellow: 'bg-[#FEBB40] border-[#E1A034]',
-	green: 'bg-[#34C848] border-[#30AB3B]',
+	red: '--red-terminal-button bg-[#FD5754] border-[#DF494A]',
+	yellow: '--yellow-terminal-button bg-[#FEBB40] border-[#E1A034]',
+	green: '--green-terminal-button bg-[#34C848] border-[#30AB3B]',
 	buttons: 'border border-solid  h-3 w-3 cursor-pointer rounded-full',
-};
+} as const;
 export const terminalContent = {
 	default:
 		'h-full rounded-b-md overflow-hidden overflow-y-scroll no-scrollbar',

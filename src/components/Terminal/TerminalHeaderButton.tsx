@@ -24,8 +24,8 @@ const TerminalHeaderButton = () => {
 						id={item.title}
 						key={index}
 						className={cn(
-							terminalHeaderButtonClass.buttons,
-							item.classNames
+							item.classNames,
+							terminalHeaderButtonClass.buttons
 						)}
 						onClick={() => handleClick(item.actions)}
 					/>

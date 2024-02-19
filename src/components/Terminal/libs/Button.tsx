@@ -1,10 +1,12 @@
 'use client';
 
 import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import { TActions } from './Constant';
+
 export function Button() {
 	const { setMaximize, setMinimize, setOpen, open, maximize, minimize } =
 		useTerminalProvider();
-	function handleClick(args: string) {
+	function handleClick(args: TActions) {
 		switch (args) {
 			case 'open':
 				setOpen((prev) => !prev);

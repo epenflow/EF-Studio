@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { CONTENT } from './libs/Constant';
 import { Contact } from './Contact';
 import Draggable from 'react-draggable';
+import cn from '@/utils/cn';
 const text = [
 	'we are building our new website, stay tuned',
 	'patience is a virtue',
@@ -24,8 +25,9 @@ const DragCards = () => {
 					<div className='flex flex-row items-center gap-1 my-2'>
 						<span
 							id='drag__handle_info'
-							className='block cursor-move h-3 w-3 rounded-full border-[1px] border-solid border-black hover:bg-black'
-						/>
+							className={cn(
+								`cursor-move h-3 w-3 rounded-full border-[1px] border-solid border-black hover:bg-black`
+							)}></span>
 						<Heading className='m-0'>information</Heading>
 					</div>
 					<p className='text-xs text-justify cursor-text'>

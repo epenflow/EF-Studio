@@ -1,31 +1,34 @@
 import { terminalHeaderButtonClass } from './ClassName';
-const title = {
+const Title = {
 	open: 'red__open',
 	minimize: 'yellow__minimize',
 	maximize: 'green__maximize',
-};
-type buttons = {
+} as const;
+const Actions = ['open', 'minimize', 'maximize'] as const;
+
+export type TActions = (typeof Actions)[keyof typeof Actions];
+type TButtons = {
 	key: number;
-	title: string;
-	classNames: string;
-	actions: string;
+	title: (typeof Title)[keyof typeof Title];
+	classNames: (typeof terminalHeaderButtonClass)[keyof typeof terminalHeaderButtonClass];
+	actions: TActions;
 };
-export const buttons: buttons[] = [
+export const buttons: TButtons[] = [
 	{
 		key: 1,
-		title: title.open,
+		title: 'red__open',
 		classNames: terminalHeaderButtonClass.red,
 		actions: 'minimize',
 	},
 	{
 		key: 2,
-		title: title.minimize,
+		title: 'yellow__minimize',
 		classNames: terminalHeaderButtonClass.yellow,
 		actions: 'minimize',
 	},
 	{
 		key: 3,
-		title: title.maximize,
+		title: 'green__maximize',
 		classNames: terminalHeaderButtonClass.green,
 		actions: 'maximize',
 	},
