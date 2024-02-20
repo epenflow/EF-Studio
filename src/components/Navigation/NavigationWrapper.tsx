@@ -18,7 +18,7 @@ const NavigationWrapper = ({
 		<Element
 			title={title}
 			id={id}
-			className={cn(className, 'flex items-center justify-center')}>
+			className={cn(className, 'flex items-center justify-center ')}>
 			<div
 				title={titleWrapper}
 				className={cn(wrapper)}>

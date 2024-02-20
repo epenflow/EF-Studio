@@ -22,14 +22,14 @@ const TerminalCards = ({
 		<TerminalProvider>
 			<Terminal
 				heading={heading}
-				className={cn('bg-black bg-opacity-50')}
+				className={cn('bg-default-300')}
 				onClick={onClick}
 				style={style}
 				defaultPositionX={defaultPositionX}
 				defaultPositionY={defaultPositionY}>
 				<TerminalContent
 					className={cn(
-						'flex flex-col p-2 text-lg font-medium bg-white gap-1 lg:text-xl cursor-auto overflow-scroll',
+						'flex flex-col p-2 text-lg font-medium bg-white gap-1 lg:text-xl cursor-auto overflow-hidden overflow-y-scroll no-scrollbar',
 						contentClassNames
 					)}>
 					{children}

@@ -25,6 +25,5 @@ export const terminalHeaderButtonClass = {
 	buttons: 'border border-solid  h-3 w-3 cursor-pointer rounded-full',
 } as const;
 export const terminalContent = {
-	default:
-		'h-full rounded-b-lg overflow-hidden overflow-y-scroll no-scrollbar',
+	default: 'h-full rounded-b-lg',
 };
