@@ -1,7 +1,6 @@
 import React from 'react';
 import Cards from './Cards';
-import TerminalList from './TerminalList';
-
+const TerminalList = React.lazy(() => import('./TerminalList'));
 const MainSections = () => {
 	return (
 		<section className='overflow-hidden'>

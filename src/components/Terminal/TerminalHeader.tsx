@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import TerminalHeaderButton from './TerminalHeaderButton';
 import { terminalHeaderClass } from './libs/ClassName';
 import TerminalTitle from './TerminalTitle';
 import { useTerminalProvider } from '@/utils/context/TerminalContext';
+const TerminalHeaderButton = React.lazy(() => import('./TerminalHeaderButton'));
 import cn from '@/utils/cn';
 interface Props {
 	title: string;

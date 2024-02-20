@@ -23,7 +23,7 @@ const config: Config = {
 					300: '#f5f5f5',
 					400: '#D0D0D0',
 					//blue
-					500: '#007AF',
+					500: '#007AFF',
 					600: '#c9e3ff',
 				},
 			},
