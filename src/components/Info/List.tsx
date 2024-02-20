@@ -19,8 +19,8 @@ const List: React.FC<HTMLAttributes<HTMLSpanElement>> = ({
 			)}>
 			<span
 				className={cn(
-					'w-2 h-2 rounded-full border-[1px] border-solid border-black',
-					isHover && 'bg-black'
+					'w-2 h-2 rounded-full border-[1px] border-solid border-default-400 bg-default-300',
+					isHover && ' bg-[#007AFF] border-[#c9e3ff]'
 				)}
 			/>
 			{children}

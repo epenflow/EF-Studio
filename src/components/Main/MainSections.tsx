@@ -1,10 +1,11 @@
 import React from 'react';
-import { TerminalCards } from './TerminalCards';
 import Cards from './Cards';
+import TerminalList from './TerminalList';
+
 const MainSections = () => {
 	return (
 		<section className='overflow-hidden'>
-			<TerminalCards />
+			<TerminalList />
 			<Cards />
 		</section>
 	);

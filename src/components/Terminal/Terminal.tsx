@@ -12,6 +12,8 @@ import Draggable from 'react-draggable';
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;
+	defaultPositionX?: number | string;
+	defaultPositionY?: number | string;
 }
 
 const Terminal: React.FC<Props> = ({
@@ -19,6 +21,10 @@ const Terminal: React.FC<Props> = ({
 	heading,
 	fitContent = false,
 	className,
+	style,
+	onClick,
+	defaultPositionX,
+	defaultPositionY,
 }) => {
 	const { minimize } = useTerminalProvider();
 	const isDom = domReady();
@@ -44,7 +50,11 @@ const Terminal: React.FC<Props> = ({
 				<TerminalModal
 					heading={heading}
 					fitContent={fitContent}
-					className={className}>
+					className={className}
+					style={style}
+					onClick={onClick}
+					defaultPositionX={defaultPositionX}
+					defaultPositionY={defaultPositionY}>
 					{children}
 				</TerminalModal>
 			</>

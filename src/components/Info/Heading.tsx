@@ -8,7 +8,7 @@ const Heading: React.FC<HTMLAttributes<HTMLHeadingElement>> = ({
 	return (
 		<h1
 			className={cn(
-				'capitalize text-xs font-medium mt-2 mb-3 cursor-text',
+				'capitalize text-xs font-medium cursor-text',
 				className
 			)}>
 			{children}

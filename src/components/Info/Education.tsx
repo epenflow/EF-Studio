@@ -6,12 +6,10 @@ interface Props {
 }
 const Education: React.FC<Props> = ({ service }) => {
 	return (
-		<div className='text-xs flex flex-col gap-1'>
-			<Mapping
-				of={service}
-				render={(item, index) => <List key={index}>{item}</List>}
-			/>
-		</div>
+		<Mapping
+			of={service}
+			render={(item, index) => <List key={index}>{item}</List>}
+		/>
 	);
 };
 

@@ -21,41 +21,43 @@ const DragCards = () => {
 	return (
 		<Draggable handle='#drag__handle_info'>
 			<div className='flex justify-end'>
-				<Cards className='w-full lg:w-1/2 h-auto p-2 relative no-scrollbar shadow-default-100'>
-					<div className='flex flex-row items-center gap-1 my-2'>
+				<Cards className='w-full lg:w-1/2 h-auto relative no-scrollbar shadow-default-200 rounded-lg'>
+					<div className='flex flex-row items-center gap-1 bg-default-300 p-2 rounded-t-lg border-b-[1px] border-solid border-default-400 shadow-default-200'>
 						<span
 							id='drag__handle_info'
 							className={cn(
-								`cursor-move h-3 w-3 rounded-full border-[1px] border-solid border-black hover:bg-black`
+								`cursor-move h-3 w-3 rounded-full border-[1px] border-solid border-default-400 hover:bg-[#007AFF] hover:border-[#c9e3ff]`
 							)}></span>
-						<Heading className='m-0'>information</Heading>
+						<Heading>information</Heading>
 					</div>
-					<p className='text-xs text-justify cursor-text'>
-						{CONTENT.description}
-					</p>
-					<div className='flex lg:flex-col flex-row justify-between  gap-2 mb-1 mt-3'>
-						<div>
-							<Heading className='mb-2 mt-0'>service</Heading>
-							<Education service={CONTENT.service} />
+					<div className='flex flex-col px-2 my-2 gap-2'>
+						<p className='text-xs text-justify cursor-text'>
+							{CONTENT.description}
+						</p>
+						<div className='flex lg:flex-col flex-row justify-between  gap-2'>
+							<div>
+								<Heading>service</Heading>
+								<Education service={CONTENT.service} />
+							</div>
+							<div>
+								<Heading>contact</Heading>
+								<Contact contact={CONTENT.contact} />
+							</div>
+							<div>
+								<Heading>who am i</Heading>
+								<Heading className='flex justify-center flex-col'>
+									<span>©️epen flow 2024</span>
+									<span>Idea, Form, Function</span>
+									<span>(Brand/Design/Code)</span>
+								</Heading>
+							</div>
 						</div>
-						<div>
-							<Heading className='mb-2 mt-0'>contact</Heading>
-							<Contact contact={CONTENT.contact} />
-						</div>
-						<div>
-							<Heading className='mb-2 mt-0'>who am i</Heading>
-							<Heading className='flex justify-center flex-col'>
-								<span>©️epen flow 2024</span>
-								<span>Idea, Form, Function</span>
-								<span>(Brand/Design/Code)</span>
-							</Heading>
-						</div>
+						<Link
+							href={'#'}
+							className='bg-default-300 border-default w-full flex items-center justify-center rounded-lg hover:bg-[#007AFF] font-medium uppercase p-2 text-xs text-default-400 hover:text-white shadow-default-200 hover:border-[#c9e3ff]'>
+							download cv
+						</Link>
 					</div>
-					<Link
-						href={'#'}
-						className='border-default p-1 uppercase w-full flex items-center justify-center text-default-400 hover:bg-black hover:text-white text-sm'>
-						download cv
-					</Link>
 				</Cards>
 			</div>
 		</Draggable>
