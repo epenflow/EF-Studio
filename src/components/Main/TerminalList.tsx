@@ -17,10 +17,8 @@ const TerminalList = () => {
 		<Mapping
 			of={Array.from({ length: 2 })}
 			render={(_, index) => {
-				index = index ?? 1;
 				const activeIndex = activeList.findIndex((id) => id === index);
 				const zIndex = activeIndex > 0 ? activeIndex * 100 : 50;
-				console.info(zIndex);
 				return (
 					<TerminalCards
 						key={index}
@@ -30,7 +28,7 @@ const TerminalList = () => {
 								: '__note__from/epenflow'
 						}
 						defaultPositionY={index % 2 === 0 ? '-55%' : '-45%'}
-						defaultPositionX={'-50%'}
+						defaultPositionX={index % 2 === 0 ? '-55%' : '-45%'}
 						style={{
 							zIndex: zIndex,
 						}}

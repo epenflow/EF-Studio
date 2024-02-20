@@ -6,8 +6,8 @@ import cn from '@/utils/cn';
 interface Props extends HTMLAttributes<HTMLDivElement> {
 	contentClassNames?: string;
 	heading: string;
-	defaultPositionX?: number | string;
-	defaultPositionY?: number | string;
+	defaultPositionX: number | string;
+	defaultPositionY: number | string;
 }
 const TerminalCards = ({
 	onClick,

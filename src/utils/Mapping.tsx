@@ -5,7 +5,7 @@ const Mapping = <T,>({
 	render,
 }: {
 	of: T[];
-	render: (item: T, index?: number) => React.ReactNode;
+	render: (item: T, index: number) => React.ReactNode;
 }) => {
 	return React.Children.toArray(of.map((item, index) => render(item, index)));
 };

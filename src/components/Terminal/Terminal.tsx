@@ -7,13 +7,11 @@ import TerminalModal from './TerminalModal';
 import { domReady } from '@/utils/hooks/domReady';
 import { useTerminalProvider } from '@/utils/context/TerminalContext';
 import Condition from '@/utils/Condition';
-import Comments from '@/utils/Comments';
-import Draggable from 'react-draggable';
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;
-	defaultPositionX?: number | string;
-	defaultPositionY?: number | string;
+	defaultPositionX: number | string;
+	defaultPositionY: number | string;
 }
 
 const Terminal: React.FC<Props> = ({
@@ -37,27 +35,18 @@ const Terminal: React.FC<Props> = ({
 			state={minimize}
 			secondChildren={
 				isDom &&
-				createPortal(
-					<>
-						<Comments comment='terminal header' />
-						<TerminalHeader title={heading} />
-					</>,
-					programWindow
-				)
+				createPortal(<TerminalHeader title={heading} />, programWindow)
 			}>
-			<>
-				<Comments comment='terminal modal' />
-				<TerminalModal
-					heading={heading}
-					fitContent={fitContent}
-					className={className}
-					style={style}
-					onClick={onClick}
-					defaultPositionX={defaultPositionX}
-					defaultPositionY={defaultPositionY}>
-					{children}
-				</TerminalModal>
-			</>
+			<TerminalModal
+				heading={heading}
+				fitContent={fitContent}
+				className={className}
+				style={style}
+				onClick={onClick}
+				defaultPositionX={defaultPositionX}
+				defaultPositionY={defaultPositionY}>
+				{children}
+			</TerminalModal>
 		</Condition>
 	);
 };
