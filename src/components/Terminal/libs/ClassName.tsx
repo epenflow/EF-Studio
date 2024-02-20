@@ -2,7 +2,7 @@ export const terminalClass = {
 	positions: 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50',
 	styles: 'bg-default-200 border-default rounded-lg flex flex-col shadow-default-200',
 	sizes: {
-		lg: 'h-4/5 w-4/5',
+		lg: 'h-[90%] w-[90%]',
 		md: 'h-[50vh] lg:h-4/5 w-4/5 lg:w-1/2',
 	},
 	modal: 'w-screen h-screen flex items-center justify-center',
