@@ -1,15 +1,17 @@
 import Navigation from '@/components/Navigation/Navigation';
-import Author from '@/components/Projects/Author';
+import Author from '@/app/projects/components/Author';
 import Mapping from '@/utils/Mapping';
 import cn from '@/utils/cn';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import Caution from '@/components/Caution';
 
 export default function Page() {
 	return (
 		<Navigation>
 			<main className='flex flex-col justify-center'>
+				<Caution className='z-50' />
 				<Mapping
 					of={Array.from({ length: 21 })}
 					render={(_, index) => (
@@ -51,12 +53,12 @@ export default function Page() {
 									molestias eum dicta? Obcaecati similique
 									dolore nesciunt tempore.
 								</p>
+								<Link
+									href={'/projects/slug'}
+									className='absolute right-2 bottom-10 text-3xl  rounded-lg capitalize text-default-200 lg:text-black hover:underline'>
+									read more
+								</Link>
 							</div>
-							<Link
-								href={'/projects/slug'}
-								className='absolute right-2 lg:bottom-10 bottom-6 text-3xl  rounded-lg capitalize text-default-200 lg:text-black hover:underline'>
-								read more
-							</Link>
 						</article>
 					)}
 				/>

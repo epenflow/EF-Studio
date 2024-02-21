@@ -5,13 +5,19 @@ import { createPortal } from 'react-dom';
 import dynamic from 'next/dynamic';
 import TerminalModal from './TerminalModal';
 import { domReady } from '@/utils/hooks/domReady';
-import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import { useTerminalProvider } from '@/components/Terminal/libs/TerminalContext';
 import Condition from '@/utils/Condition';
+type OffsetPositon = {
+	x: number | string;
+	y: number | string;
+};
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;
-	defaultPositionX: number | string;
-	defaultPositionY: number | string;
+	offsetPosition: {
+		x: number | string;
+		y: number | string;
+	};
 }
 
 const Terminal: React.FC<Props> = ({
@@ -21,8 +27,7 @@ const Terminal: React.FC<Props> = ({
 	className,
 	style,
 	onClick,
-	defaultPositionX,
-	defaultPositionY,
+	offsetPosition,
 }) => {
 	const { minimize } = useTerminalProvider();
 	const isDom = domReady();
@@ -43,8 +48,7 @@ const Terminal: React.FC<Props> = ({
 				className={className}
 				style={style}
 				onClick={onClick}
-				defaultPositionX={defaultPositionX}
-				defaultPositionY={defaultPositionY}>
+				offsetPosition={offsetPosition}>
 				{children}
 			</TerminalModal>
 		</Condition>

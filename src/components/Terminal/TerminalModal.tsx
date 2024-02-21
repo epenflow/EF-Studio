@@ -2,14 +2,16 @@
 import React from 'react';
 import { terminalClass } from './libs/ClassName';
 import TerminalHeader from './TerminalHeader';
-import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import { useTerminalProvider } from './libs/TerminalContext';
 import cn from '@/utils/cn';
 import Draggable from 'react-draggable';
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
 	heading: string;
 	fitContent?: boolean;
-	defaultPositionX: string | number;
-	defaultPositionY: number | string;
+	offsetPosition: {
+		x: number | string;
+		y: number | string;
+	};
 }
 
 const TerminalModal: React.FC<Props> = ({
@@ -19,8 +21,8 @@ const TerminalModal: React.FC<Props> = ({
 	className,
 	style,
 	onClick,
-	defaultPositionX,
-	defaultPositionY,
+
+	offsetPosition,
 }) => {
 	const { maximize } = useTerminalProvider();
 	React.useEffect(() => {
@@ -44,8 +46,8 @@ const TerminalModal: React.FC<Props> = ({
 			style={style}>
 			<Draggable
 				positionOffset={{
-					x: !maximize ? defaultPositionX : 0,
-					y: !maximize ? defaultPositionY : 0,
+					x: !maximize ? offsetPosition.x : 0,
+					y: !maximize ? offsetPosition.y : 0,
 				}}
 				handle='#terminal__title'>
 				<div

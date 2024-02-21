@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Window from '@/components/Terminal/Window';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,10 +18,7 @@ export default function RootLayout({
 			lang='en'
 			className='notranslate'
 			translate='no'>
-			<body className={`${inter.className}`}>
-				<Window />
-				{children}
-			</body>
+			<body className={`${inter.className}`}>{children}</body>
 		</html>
 	);
 }

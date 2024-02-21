@@ -2,7 +2,7 @@
 import React from 'react';
 import { terminalHeaderClass } from './libs/ClassName';
 import TerminalTitle from './TerminalTitle';
-import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import { useTerminalProvider } from '@/components/Terminal/libs/TerminalContext';
 const TerminalHeaderButton = React.lazy(() => import('./TerminalHeaderButton'));
 import cn from '@/utils/cn';
 interface Props {

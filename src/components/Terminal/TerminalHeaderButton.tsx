@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from './libs/Button';
 import { terminalHeaderButtonClass } from './libs/ClassName';
 import { buttons } from './libs/Constant';
-import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import { useTerminalProvider } from '@/components/Terminal/libs/TerminalContext';
 import Mapping from '@/utils/Mapping';
 import cn from '@/utils/cn';
 const TerminalHeaderButton = () => {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useTerminalProvider } from '@/utils/context/TerminalContext';
+import { useTerminalProvider } from '@/components/Terminal/libs/TerminalContext';
 import { TActions } from './Constant';
 
 export function Button() {

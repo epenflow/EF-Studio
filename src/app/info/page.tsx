@@ -1,12 +1,14 @@
+import Caution from '@/components/Caution';
 import Navigation from '@/components/Navigation/Navigation';
-import InformationCard from '@/components/Info/InformationCard';
+import Window from '@/components/Terminal/Window';
 
 export default function page() {
 	return (
 		<>
+			<Window />
 			<Navigation>
-				<main className='w-screen h-screen overflow-hidden flex items-center justify-end p-2 relative'>
-					<InformationCard />
+				<main className=''>
+					<Caution />
 				</main>
 			</Navigation>
 		</>

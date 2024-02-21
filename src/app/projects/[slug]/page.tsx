@@ -1,7 +1,9 @@
-import Author from '@/components/Projects/Author';
+import Author from '@/app/projects/components/Author';
+import Caution from '@/components/Caution';
 export default function Page() {
 	return (
 		<main className='lg:mt-14 mt-7 px-3.5'>
+			<Caution className='z-50' />
 			<section className='w-full lg:w-1/2 m-auto flex flex-col gap-5 text-justify '>
 				<h1 className='text-4xl font-bold'>
 					Lorem ipsum dolor sit amet, consectetur adipisicing.

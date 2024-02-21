@@ -27,8 +27,10 @@ const TerminalList = () => {
 								? '__NDX-AKA-NEMEN__'
 								: '__note__from/epenflow'
 						}
-						defaultPositionY={index % 2 === 0 ? '-55%' : '-45%'}
-						defaultPositionX={index % 2 === 0 ? '-55%' : '-45%'}
+						offsetPosition={{
+							x: index % 2 === 0 ? '-55%' : '-45%',
+							y: index % 2 === 0 ? '-55%' : '-45%',
+						}}
 						style={{
 							zIndex: zIndex,
 						}}

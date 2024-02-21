@@ -1,14 +1,20 @@
 'use client';
-import React from 'react';
+import cn from '@/utils/cn';
+import React, { HTMLAttributes } from 'react';
 import Draggable from 'react-draggable';
-
-const Caution = () => {
+interface Props extends HTMLAttributes<HTMLDivElement> {}
+const Caution: React.FC<Props> = ({ className, style }) => {
 	return (
-		<Draggable>
-			<div className='bg-[#F7D417] text-3xl lg:text-5xl font-bold uppercase text-center p-2 flex flex-col cursor-move'>
-				<h1 className='text-5xl lg:text-6xl bg-black text-[#F7D417]'>
+		<Draggable positionOffset={{ x: '-50%', y: '-50%' }}>
+			<div
+				className={cn(
+					'bg-[#F7D417] text-3xl lg:text-5xl font-bold uppercase text-center p-2 flex flex-col cursor-move fixed w-fit left-1/2 top-1/2',
+					className
+				)}
+				style={style}>
+				<span className='text-5xl lg:text-6xl bg-black text-[#F7D417]'>
 					caution
-				</h1>
+				</span>
 				<span>
 					construction
 					<br />
