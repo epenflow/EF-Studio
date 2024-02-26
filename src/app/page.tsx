@@ -7,8 +7,11 @@ export default function Home() {
 		<>
 			<Window />
 			<Navigation>
-				<main className=''>
+				<main className='pt-5'>
 					<Caution />
+					<h1 className='relative z-10 p-2 text-6xl font-bold uppercase mix-blend-difference text-default-200'>
+						ideas only matter if they're made real
+					</h1>
 					<TerminalList />
 				</main>
 			</Navigation>

@@ -7,7 +7,7 @@ const TerminalVideo: React.FC<Props> = ({ videoId }) => {
 	return (
 		<YouTube
 			videoId={videoId}
-			className='h-full w-full flex items-center justify-center'
+			className='flex items-center justify-center w-full h-full'
 			iframeClassName='w-full h-full'
 		/>
 	);

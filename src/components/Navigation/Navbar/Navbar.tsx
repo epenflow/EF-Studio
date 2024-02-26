@@ -27,7 +27,7 @@ const Navbar = () => {
 				<Link
 					scroll={false}
 					href={'/info'}
-					className='flex items-center justify-center gap-1 cursor-pointer capitalize'
+					className='flex items-center justify-center gap-1 capitalize cursor-pointer'
 					onMouseEnter={hover}
 					onMouseLeave={hover}>
 					<span

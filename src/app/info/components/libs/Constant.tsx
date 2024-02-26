@@ -13,9 +13,11 @@ type ContentType = {
 	education: Array<Education>;
 	service: Array<string>;
 	contact: Array<Contact>;
+	descriptionTwo: string;
 };
 export const CONTENT: ContentType = {
 	description: `Hi, I'm I Putu Mega Krisnayana, but you can call me Epen Flow. I live in Bali, and I'm really enthusiastic about technology and art. I view art and technology as two halves of a whole, like Yin and Yang. I believe in the transformative power of innovation and creativity should make our lives easier, faster, and more efficient. That's why I decide to pursue a degree in information systems at ITB STIKOM BALI. Moreover, I'm also self-taught, and whenever I have free time, I spend it studying programming and other topics that I find interesting. With a strong interest in technology, programming, music, art, and photography, I have developed a diverse set of skills. My skills include communication, teamwork, and leadership. I’m proficient in using Microsoft Office and Adobe Creative Suite. In terms of programming, I have experience with Laravel, Next-Js, and Python. Additionally, I'm skilled in using Corel Draw, Adobe Creative Suite and Blender for design and animation purposes. My interests and skills combined make me a well-rounded individual capable of contributing to various fields. If you're interested in learning more about me, you can preview my portfolio on my website.`,
+	descriptionTwo: `I'm Epen Flow, I'm passionated with design and programming. I view design and programming as two halves of a whole, like yin and yang that are always connected into one whole. Specializing in immersive web experiences, I combine elegant aesthetics, engaging interactive animations, and intuitive usability to get the most out of every project.`,
 	education: [
 		{
 			school: 'itb stikom bali',
