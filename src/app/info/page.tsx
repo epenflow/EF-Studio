@@ -9,7 +9,7 @@ export default function page() {
 			<Window />
 			<Navigation>
 				<main className='relative flex flex-col gap-2 px-2 pt-10 overflow-x-clip '>
-					<h1 className='text-4xl font-medium capitalize'>
+					<h1 className='text-4xl font-medium capitalize mix-blend-difference text-default-200'>
 						information
 					</h1>
 					<div
