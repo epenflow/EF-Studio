@@ -10,7 +10,7 @@ import Caution from '@/components/Caution';
 export default function Page() {
 	return (
 		<Navigation>
-			<main className='flex flex-col justify-center'>
+			<main className='flex flex-col justify-center relative'>
 				<Caution className='z-50' />
 				<Mapping
 					of={Array.from({ length: 21 })}
